@@ -1,1 +1,6 @@
-<%= @post.url %>
+<p><%= link_to "#{@post.title}", @post %><p>
+<p><%= "#{@post.comments.count} 评论" %><p>
+<% @post.comments.each do |comment| %>
+	<p><%= comment.content %></p>
+<% end %>
+		
