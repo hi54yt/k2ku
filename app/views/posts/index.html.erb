@@ -1,3 +1,6 @@
+<%= link_to '酷存', new_post_path %>
+<ul>
 <% @posts.each do |post| %>
-<%= link_to "#{post.title}", post %> | <%= "#{post.comments.count}" %>
+  <li><%= link_to "#{post.title}", "http://#{post.url}" %> | <%= "#{post.comments.count}" %></li>
 <% end %>
+<ul>
